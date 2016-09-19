@@ -35,7 +35,7 @@
                             <?php
                             foreach ($affiche_creation as $creat) {
                                 ?>
-                                <div class="col-md-4 col-lg-3 admin-tofs">
+                                <div class="col-md-4 admin-tofs">
                                     <img src='vue/img/creation/<?= $creat->imgsrc ?>' alt='<?= $creat->id ?>'
                                          title='<?= $creat->nom ?>' height="120"/>
                                     <img onmouseover="this.style.cursor='pointer';"
