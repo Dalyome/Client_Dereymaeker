@@ -12,26 +12,26 @@ include_once "header.php"
             <ul id="accueil" class="thumbnails">
                 <li class="span4">
                     <div class="thumbnail test">
-                        <a href="?section=conseil"><img alt="" src="vue/img/presentation/conseil.jpg"/></a>
+                        <a href="?section=conseil"><img alt="" src="vue/img/presentation/conseil.jpg"/>
                         <div class="textbox">
-                            <div class="text"><p style="padding-top: 10px;">Conseillère en image</p></div>
+                            <div class="text"><p style="padding-top: 10px;">Conseillère en image</p></div></a>
                         </div>
                     </div>
                 </li>
                 <li class="span4">
                     <div class="thumbnail test">
                         <a href="?section=creation"><img alt="300x200"
-                                                         src="vue/img/presentation/handmadecraft.jpg"/></a>
+                                                         src="vue/img/presentation/handmadecraft.jpg"/>
                         <div class="textbox">
-                            <div class="text"><p style="padding-top: 10px;">Créatrice</p></div>
+                            <div class="text"><p style="padding-top: 10px;">Créatrice</p></div></a>
                         </div>
                     </div>
                 </li>
                 <li class="span4">
                     <div class="thumbnail test">
-                        <a href="?section=peinture"><img alt="300x200" src="vue/img/presentation/peinture.jpg"/></a>
+                        <a href="?section=peinture"><img alt="300x200" src="vue/img/presentation/peinture.jpg"/>
                         <div class="textbox">
-                            <div class="text"><p style="padding-top: 10px;">Artiste peintre</p></div>
+                            <div class="text"><p style="padding-top: 10px;">Artiste peintre</p></div></a>
                         </div>
                     </div>
                 </li>
