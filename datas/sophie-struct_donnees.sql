@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 15 Septembre 2016 à 09:34
+-- Généré le :  Mar 20 Septembre 2016 à 13:24
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -127,11 +127,11 @@ CREATE TABLE IF NOT EXISTS `partenaire` (
 --
 
 INSERT INTO `partenaire` (`id`, `nom`, `logohref`, `logosrc`) VALUES
-(3, 'A suivre', 'http://www.asuivre.be/SHOPS', ''),
-(4, 'Fabienne Antomarchi Photographie', 'www.fabienneantomarchi.com', ''),
-(5, 'Katy Lakatos A la source de soi', 'https://fr-fr.facebook.com/VoyageAuCoeurduSoi/', ''),
-(6, 'Salon 41', 'http://www.salon41.be/contact.html', ''),
-(7, 'Bewell', 'http://www.bewell.brussels/', '');
+(3, 'A suivre', 'http://www.asuivre.be/SHOPS', 'asuivre.jpg'),
+(4, 'Fabienne Antomarchi Photographie', 'www.fabienneantomarchi.com', 'antomarchi.jpg'),
+(5, 'Katy Lakatos A la source de soi', 'https://fr-fr.facebook.com/VoyageAuCoeurduSoi/', 'katylakatos.jpg'),
+(6, 'Salon 41', 'http://www.salon41.be/contact.html', 'salon41.jpg'),
+(7, 'Bewell', 'http://www.bewell.brussels/', 'bewell.jpg');
 
 -- --------------------------------------------------------
 
@@ -147,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `peinture` (
   `imgsrc` text,
   `vendu` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Contenu de la table `peinture`
@@ -162,25 +162,8 @@ INSERT INTO `peinture` (`id`, `nom`, `description`, `imghref`, `imgsrc`, `vendu`
 (6, 'fdsqjklfmsdqf ', 'dsqfsqfsdqf fsdfsd fsd dfdsd qAE RGFDGS  fdsdf', 'img06.jpg', 'img06.jpg', 0),
 (7, 'De Finibus Bonorum et Malorum', 'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?', 'img07.jpg', 'img07.jpg', 0),
 (8, 'De Finibus Bonorum et Malorum', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. ', 'img08.jpg', 'img08.jpg', 0),
-(9, 'test', NULL, 'big_0fb59b4694a41a70f3c900baa0fb9e660eb02983.jpg', 'big_0fb59b4694a41a70f3c900baa0fb9e660eb02983.jpg', 0),
-(10, 'test', NULL, 'big_0fb59b4694a41a70f3c900baa0fb9e660eb02983.jpg', 'big_0fb59b4694a41a70f3c900baa0fb9e660eb02983.jpg', 0),
-(11, '42542', NULL, 'big_0fb59b4694a41a70f3c900baa0fb9e660eb02983.jpg', 'big_0fb59b4694a41a70f3c900baa0fb9e660eb02983.jpg', 0),
-(12, 'fdsg', NULL, 'big_5d93f531d9d02341dda4584056996453e8875a56.jpg', 'big_5d93f531d9d02341dda4584056996453e8875a56.jpg', 0),
-(13, 'fdsg', NULL, 'big_5d93f531d9d02341dda4584056996453e8875a56.jpg', 'big_5d93f531d9d02341dda4584056996453e8875a56.jpg', 0),
-(14, 'fds', NULL, 'big_1e1ac94700e0bce2bd72e8972273b5c4bb1be60f.jpg', 'big_1e1ac94700e0bce2bd72e8972273b5c4bb1be60f.jpg', 0),
-(15, 'fds', NULL, 'big_1e1ac94700e0bce2bd72e8972273b5c4bb1be60f.jpg', 'big_1e1ac94700e0bce2bd72e8972273b5c4bb1be60f.jpg', 0),
-(16, 'fgfgfgf', NULL, 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 0),
-(17, 'fgfgfgf', NULL, 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 0),
-(18, 'fgfgfgf', NULL, 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 0),
-(19, 'fgfgfgf', NULL, 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 0),
-(20, 'fgfgfgf', NULL, 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 0),
-(21, 'fgfgfgf', NULL, 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 0),
-(22, 'fgfgfgf', NULL, 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 0),
-(23, 'test', NULL, 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 0),
-(24, 'test', NULL, 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 0),
-(25, 'teststsd', NULL, 'big_1e1ac94700e0bce2bd72e8972273b5c4bb1be60f.jpg', 'big_1e1ac94700e0bce2bd72e8972273b5c4bb1be60f.jpg', 0),
-(26, 'test', NULL, 'big_7e98f6dd1c21822830a39d673ff6ccd19fa75a43.jpg', 'big_7e98f6dd1c21822830a39d673ff6ccd19fa75a43.jpg', 0),
-(27, 'trgsd', NULL, 'big_1e1ac94700e0bce2bd72e8972273b5c4bb1be60f.jpg', 'big_1e1ac94700e0bce2bd72e8972273b5c4bb1be60f.jpg', 0);
+(9, 'Vache', NULL, '201609191538292062.jpg', '201609191538292062.jpg', 0),
+(10, 'vache 2', NULL, '201609191539191796.jpg', '201609191539191796.jpg', 0);
 
 -- --------------------------------------------------------
 
