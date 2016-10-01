@@ -16,6 +16,13 @@
                 <div class="col-lg-12">
                     <!--BOUTON A NE PAS SUPPRIMER-->
                     <a href="#menu-toggle" class="visible-xs btn btn-default" id="menu-toggle">Accéder au menu</a>
+                    <?php if ($affiche_demo) {
+                        ?>
+                        <h1>Vous etes dans la demo désoler</h1>
+                        <p><a href="?peinture">Retour</a></p>
+                        <?php
+                    }else{
+                    ?>
                     <h1><?= $titre ?></h1>
                     <div class="alert alert-danger" role="alert"><strong>Attention</strong> : c'est mieux d'insérer une image qui a l'extension .jpg ou .jpeg. <br/>Les formats .gif ou .png ne sont pas supportés sur cette administration.</div>
                     <?php if ($affiche_insertion) {
@@ -39,7 +46,7 @@
                         <h2>Félicitations ! La photo de la peinture a bien été ajoutée !</h2>
                         <p><a class="btn btn-success btn-xs" href="?peinture">Retour</a> - <a class="btn btn-success btn-xs" href="?nouvelle_peinture">Ajouter une nouvelle peinture</a></p>
                         <?php
-                    } ?>
+                    }} ?>
                 </div>
             </div>
         </div>

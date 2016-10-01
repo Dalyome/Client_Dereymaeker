@@ -2,6 +2,7 @@
 if (empty($_POST['edition'])) { // si le formulaire d'édition est vide
     $affiche_modif = true;
     $affiche_success = false;
+    $affiche_demo= false ;
 
     $requete = $dbh->prepare("SELECT id, nom, description, imgsrc , imghref, vendu FROM peinture ORDER BY id ASC ;");
     $requete->execute();
@@ -13,8 +14,12 @@ if (empty($_POST['edition'])) { // si le formulaire d'édition est vide
 
     $affiche_modif = false;
 
+    if($_SESSION['droit'] != 1) {
+        $affiche_demo = true;
+        $affiche_success = false;
+    }else{
 
-
+        $affiche_demo= false ;
 
     try {
 
@@ -94,7 +99,7 @@ if (empty($_POST['edition'])) { // si le formulaire d'édition est vide
         $dbh->rollBack();
         echo "Erreur : " . $e->getMessage();
     }
-}
+}}
 // à remplir en fonction de la page que tu fais
 $titre = "Peinture";
 

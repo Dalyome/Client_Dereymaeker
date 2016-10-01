@@ -2,6 +2,7 @@
 if (empty($_POST['edition'])) { // si le formulaire d'édition est vide
     $affiche_modif = true;
     $affiche_success = false;
+    $affiche_demo= false ;
 
     $requete = $dbh->prepare("SELECT id, nom, logohref FROM partenaire where id = $idpartner;");
     $requete->execute();
@@ -11,7 +12,14 @@ if (empty($_POST['edition'])) { // si le formulaire d'édition est vide
 
     $affiche_modif = false;
 
-    $lenom = htmlspecialchars(strip_tags(trim($_POST['lenom'])), ENT_QUOTES);
+    if($_SESSION['droit'] != 1) {
+        $affiche_demo = true;
+        $affiche_success = false;
+    }else{
+
+        $affiche_demo= false ;
+
+        $lenom = htmlspecialchars(strip_tags(trim($_POST['lenom'])), ENT_QUOTES);
     $url = htmlspecialchars(strip_tags(trim($_POST['url'])), ENT_QUOTES);
 
     try {
@@ -33,6 +41,7 @@ if (empty($_POST['edition'])) { // si le formulaire d'édition est vide
         $dbh->rollBack();
         echo "Erreur : " . $e->getMessage();
     }
+}
 }
 
 

@@ -16,6 +16,14 @@
                 <div class="col-lg-12">
                     <!--BOUTON A NE PAS SUPPRIMER-->
                     <a href="#menu-toggle" class="visible-xs btn btn-default" id="menu-toggle">Accéder au menu</a>
+
+                    <?php if ($affiche_demo) {
+                        ?>
+                        <h1>Vous etes dans la demo désoler</h1>
+                        <p><a href="?partner">Retour</a></p>
+                        <?php
+                    }else{
+                    ?>
                     <h1><?= $titre ?></h1>
                     <div class="alert alert-success" role="alert"><strong>Attention</strong> : c'est mieux d'insérer une image qui a l'extension .jpg ou .jpeg. <br/>Les formats .gif ou .png ne sont pas supportés sur cette administration.<br>N'hésite pas à prendre contact avec tes partenaires pour qu'ils te fournissent les images directement si tu n'es pas sure :)</div>
                     <div class="alert alert-warning" role="alert"><strong>Autre chose</strong> : Vérifie bien que l'URL de tes partenaires (le lien vers le site internet de tes partenaires) commence bien par <strong>http://</strong><br>
@@ -48,7 +56,7 @@
                         <h2>Félicitations ! Nouveau partenaire ajouté !</h2>
                         <p><a class="btn btn-success btn-xs" href="?partner">Retour</a> - <a class="btn btn-success btn-xs" href="?nouveau_partner">Ajouter une nouveau partenaire</a></p>
                         <?php
-                    } ?>
+                    } }?>
                 </div>
             </div>
         </div>

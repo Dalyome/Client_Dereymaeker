@@ -10,9 +10,16 @@ $chemin3="";
 if (empty($_POST['inserer'])) {
     $affiche_insertion = true;
     $affiche_success = false;
+
+    $affiche_demo= false ;
 } else { // le formulaire est envoyé
     $affiche_insertion = false;
-    $titre=$_POST['titrephoto'];
+    if($_SESSION['droit'] != 1) {
+        $affiche_demo = true;
+        $affiche_success = false;
+    }else{
+        $affiche_demo= false ;
+        $titre=$_POST['titrephoto'];
     $objet_envoye = new image($_FILES['oeuvre'] , $titre, $chemin2, $chemin,$chemin3);
     //var_dump($objet_envoye);
     $manager->ajouterImageCreation($objet_envoye);
@@ -23,4 +30,4 @@ if (empty($_POST['inserer'])) {
       echo "erreur";
   }
 
-}
+}}

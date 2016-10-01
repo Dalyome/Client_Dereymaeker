@@ -16,6 +16,13 @@
                 <div class="col-lg-12">
                     <!--BOUTON A NE PAS SUPPRIMER-->
                     <a href="#menu-toggle" class="visible-xs btn btn-default" id="menu-toggle">Accéder au menu</a>
+                    <?php if ($affiche_demo) {
+                        ?>
+                        <h1>Vous etes dans la demo désoler</h1>
+                        <p><a href="?partner">Retour</a></p>
+                        <?php
+                    }else{
+                    ?>
                     <h1><?= $titre ?></h1>
                     <?php if ($affiche_modif) {
                         ?>
@@ -47,7 +54,7 @@
                         <h2>Félicitations ! Le partenaire a bien été mis à jour !</h2>
                         <p><a href="?partner">Retour</a></p>
                         <?php
-                    } ?>
+                    } }?>
                 </div>
             </div>
         </div>

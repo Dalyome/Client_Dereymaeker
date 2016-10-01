@@ -25,8 +25,21 @@
                     <!--BOUTON A NE PAS SUPPRIMER-->
                     <a href="#menu-toggle" class="visible-xs btn btn-default" id="menu-toggle">Accéder au menu</a>
                     <h1><?= $titre ?></h1>
-                    <p><a href="?nouvel_evenement" type="button" class="btn btn-default">Nouvel évènement à
-                            insérer</a></p>
+                    <?php  if($_SESSION['droit'] ) { ?>
+                        <p><a href="?nouvel_evenement" type="button" class="btn btn-default">Nouvel évènement à
+                                insérer</a></p>
+                        <?php
+                    }else{
+                    ?>
+                        <p><a href="?nouvelle_creation" type="button" class="btn btn-default">Nouvelle création à
+                                insérer</a></p>
+                        <p>
+                        <div class="alert alert-info" role="alert">
+                            la suppression est retirer dans la demo
+                        </div></p>
+                    <?php
+                    }
+                    ?>
                     <table class="table table-striped">
                         <tr>
                             <th width="15%">Nom de l'évènement</th>
@@ -51,8 +64,17 @@
                                 <td><?= substr(nl2br($event->description), 0, 250) ?>...</td>
                                 <td><?= $event->lieu ?></td>
                                 <td><a href="?modif_evenement=<?= $event->id ?>"><img src="vue/img/modify.png" alt="modifier" title="modifier"/></a></td>
-                                <td><img onmouseover="this.style.cursor='pointer';" onclick='confirmDelete("<?= $event->titre ?>",<?= $event->id ?>)' src="vue/img/delete.png" alt="supprimer" title="supprimer"/>
-                                </td>
+                                <?php
+                                if($_SESSION['droit'] ) {?>
+                                <td><img onmouseover="this.style.cursor='pointer';" onclick='confirmDelete("<?= $event->titre ?>",<?= $event->id ?>)' src="vue/img/delete.png" alt="supprimer" title="supprimer"/>    </td>
+                                    <?php
+                                    }else{
+                                    ?>
+                                <td><img src="vue/img/delete.png"/><br/><td>
+                                    <?php
+                                    }
+                                    ?>
+
                             </tr>
                             <?php
                         }

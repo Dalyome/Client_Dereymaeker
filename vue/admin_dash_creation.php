@@ -26,13 +26,45 @@
                 <div class="col-lg-12">
                     <!--BOUTON A NE PAS SUPPRIMER-->
                     <a href="#menu-toggle" class="visible-xs btn btn-default" id="menu-toggle">Accéder au menu</a>
-                    <h1><?= $titre ?></h1>
-                    <?php if ($affiche_modif) {
+                    <?php if ($affiche_demo) {
                         ?>
-                        <p><a href="?nouvelle_creation" type="button" class="btn btn-default">Nouvelle création à
-                                insérer</a></p>
-                        <p><div class="alert alert-info" role="alert">Sur cette page, lorsque tu as vendu une oeuvre, il te suffit de cocher la (ou les) case(s) <strong>[vendu]</strong> correspondant aux oeuvres vendues, puis de cliquer sur le bouton <strong>[Modifier la galerie]</strong>. Cela affichera la mention "vendu" à côté de tes oeuvres sur ton site.<br/>
-                        Si tu souhaites ne plus montrer une oeuvre comme étant vendue, il te suffit de décocher la case <strong>[vendu]</strong>, puis de nouveau, de valider les modifications en cliquant sur le bouton <strong>[Modifier la galerie]</strong>.</div></p>
+                        <h1>Vous etes dans la demo désoler</h1>
+                        <p><a href="?creation">Retour</a></p>
+                        <?php
+                    }else{
+                    ?>
+                        <h1><?= $titre ?></h1>
+                    <?php if ($affiche_modif) {
+                        if($_SESSION['droit'] ) {
+                            ?>
+                            <p><a href="?nouvelle_creation" type="button" class="btn btn-default">Nouvelle création à
+                                    insérer</a></p>
+                            <p>
+                            <div class="alert alert-info" role="alert">Sur cette page, lorsque tu as vendu une oeuvre,
+                                il te suffit de cocher la (ou les) case(s) <strong>[vendu]</strong> correspondant aux
+                                oeuvres vendues, puis de cliquer sur le bouton <strong>[Modifier la galerie]</strong>.
+                                Cela affichera la mention "vendu" à côté de tes oeuvres sur ton site.<br/>
+                                Si tu souhaites ne plus montrer une oeuvre comme étant vendue, il te suffit de décocher
+                                la case <strong>[vendu]</strong>, puis de nouveau, de valider les modifications en
+                                cliquant sur le bouton <strong>[Modifier la galerie]</strong>.
+                            </div></p>
+                            <?php
+                        }else {
+                            ?>
+                            <p><a href="?nouvelle_creation" type="button" class="btn btn-default">Nouvelle création à
+                                    insérer</a></p>
+                            <p>
+                            <div class="alert alert-info" role="alert">Sur cette page, lorsque tu as vendu une oeuvre,
+                                il te suffit de cocher la (ou les) case(s) <strong>[vendu]</strong> correspondant aux
+                                oeuvres vendues, puis de cliquer sur le bouton <strong>[Modifier la galerie]</strong>.
+                                Cela affichera la mention "vendu" à côté de tes oeuvres sur ton site.<br/>
+                                Si tu souhaites ne plus montrer une oeuvre comme étant vendue, il te suffit de décocher
+                                la case <strong>[vendu]</strong>, puis de nouveau, de valider les modifications en
+                                cliquant sur le bouton <strong>[Modifier la galerie]</strong>.</br></br>la suppression est retirer dans la demo
+                            </div></p>
+                            <?php
+                        }
+                            ?>
                         <div class="row">
                             <?php
                             foreach ($affiche_creation as $creat) {
@@ -40,20 +72,33 @@
                                 <div class="col-md-4 admin-tofs">
                                     <img src='vue/img/creation/<?= $creat->imgsrc ?>' alt='<?= $creat->id ?>'
                                          title='<?= $creat->nom ?>' height="120"/>
-                                    <img onmouseover="this.style.cursor='pointer';"
-                                         onclick='confirmDelete("<?= $creat->nom ?>",<?= $creat->id ?>)' alt="supprimer"
-                                         title="supprimer" src="vue/img/delete.png"/><br/>
+                                <?php
+                                    if($_SESSION['droit'] ) {
 
-                                    <?php
-                                    //on checke la case vendu de ceux qui le sont
-                                    $vendu = $creat->vendu;
-                                    $vend = "";
 
-                                    if ($vendu == 1) {
-                                        $vend = "checked";
-                                    } elseif ($vendu == 0) {
-                                        $vend = "";
+                                        ?>
+                                        <img onmouseover="this.style.cursor='pointer';"
+                                             onclick='confirmDelete("<?= $creat->nom ?>",<?= $creat->id ?>)'
+                                             alt="supprimer"
+                                             title="supprimer" src="vue/img/delete.png"/><br/>
+
+                                        <?php
+                                    }else{
+                                        ?>
+                                        <img src="vue/img/delete.png"/><br/>
+                                        <?php
                                     }
+
+                                        //on checke la case vendu de ceux qui le sont
+                                        $vendu = $creat->vendu;
+                                        $vend = "";
+
+                                        if ($vendu == 1) {
+                                            $vend = "checked";
+                                        } elseif ($vendu == 0) {
+                                            $vend = "";
+                                        }
+
                                     ?>
                                     <form method="post">
                                         <label>vendu</label>
@@ -75,7 +120,7 @@
                         <h2>Félicitations ! La galerie création a bien été mis à jour !</h2>
                         <p><a href="javascript:history.go(-1)">Retour</a></p>
                         <?php
-                    } ?>
+                    }  }?>
                     <!--BOUTON A NE PAS SUPPRIMER-->
                     <a href="#menu-toggle" class="visible-xs btn btn-default" id="menu-toggle">Accéder au menu</a>
                 </div>
