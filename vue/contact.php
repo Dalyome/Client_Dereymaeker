@@ -46,7 +46,7 @@ include_once "header.php"
                                     <option value="conseillere en image">Conseils en image</option>
                                     <option value="peintures">Peintures</option>
                                     <option value="bijoux et customisation">Créations</option>
-                                    <option value="devis">Devis</option>
+                                    <option value="demande de devis">Devis</option>
                                     <option value="apporter un temoignage">Apporter un témoignage</option>
                                     <option value="autres">Autres</option>
                                 </select>

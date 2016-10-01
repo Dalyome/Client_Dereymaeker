@@ -45,7 +45,7 @@
                     if ($affiche_success) {
                         ?>
                         <h2>Félicitations ! Le partenaire a bien été mis à jour !</h2>
-                        <p><a href="javascript:history.go(-2)">Retour</a></p>
+                        <p><a href="?partner">Retour</a></p>
                         <?php
                     } ?>
                 </div>

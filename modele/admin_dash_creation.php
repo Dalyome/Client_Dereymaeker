@@ -56,6 +56,18 @@ if (empty($_POST['edition'])) { // si le formulaire d'édition est vide
             $dbh->commit();
             $affiche_success = true;
         }else{
+            $acc=0;
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $dbh->beginTransaction();
+
+            $prepare = $dbh->prepare("
+        UPDATE creation
+        SET vendu = :vendu");
+
+            $prepare->bindValue(":vendu", $acc, PDO::PARAM_STR);
+
+            $prepare->execute();
+            $dbh->commit();
 
             $affiche_success = true;
         }

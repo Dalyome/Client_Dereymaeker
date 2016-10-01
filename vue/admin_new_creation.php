@@ -26,7 +26,7 @@
                                 <input class="form-control" type="text" name="titrephoto" placeholder="Titre de la création" required/>
                             </div>
 
-                            <div class="form-group"> <label>Ici, je choisis l'image que je veux importer :</label><input class="btn btn-default" type="FILE" name="oeuvre"/></div>
+                            <div class="form-group"> <label>Ici, je choisis l'image que je veux importer :</label><input class="btn btn-default" type="FILE" name="oeuvre" required=""/></div>
 
                             <input class="btn btn-success" name="inserer" type="submit" value="Insérer"/><br/>
 
@@ -37,7 +37,7 @@
                     if ($affiche_success) {
                         ?>
                         <h2>Félicitations ! La photo de la création a bien été ajoutée !</h2>
-                        <p><a class="btn btn-success btn-xs" href="javascript:history.go(-2)">Retour</a> - <a class="btn btn-success btn-xs" href="?nouvelle_creation">Ajouter une nouvelle creation</a></p>
+                        <p><a class="btn btn-success btn-xs" href="?creation">Retour</a> - <a class="btn btn-success btn-xs" href="?nouvelle_creation">Ajouter une nouvelle creation</a></p>
                         <?php
                     } ?>
                 </div>

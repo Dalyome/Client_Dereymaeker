@@ -35,7 +35,7 @@
                     if ($affiche_success) {
                         ?>
                         <h2>Félicitations ! Le témoignage a bien été ajouté !</h2>
-                        <p><a href="javascript:history.go(-2)">Retour</a></p>
+                        <p><a href="?temoignage">Retour</a> - <a class="btn btn-success btn-xs" href="?nouveau_temoignage">Ajouter une nouveau témoignage</a></p>
                         <?php
                     } ?>
                 </div>

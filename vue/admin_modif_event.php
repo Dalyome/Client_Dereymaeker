@@ -55,7 +55,7 @@
                     if ($affiche_success) {
                         ?>
                         <h2>Félicitations ! L'évènement a bien été mis à jour !</h2>
-                        <p><a href="javascript:history.go(-2)">Retour</a></p>
+                        <p><a href="?evenement">Retour</a></p>
                         <?php
                     } ?>
                 </div>

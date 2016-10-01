@@ -18,9 +18,8 @@ if(is_dir($chemin)) {
 // suppression de l'image (ligne correspondante) dans la base de données
 try {
     $eventsupprime = $dbh->exec("DELETE FROM creation WHERE id= $sup;");
-    header("Location: ?creation");
+    header("Location: ./");
 }catch (Exception $e) {
     echo "Erreur :".$e->getMessage();
     die();
 }
-

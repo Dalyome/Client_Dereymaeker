@@ -66,7 +66,7 @@ include_once "header.php"
                         foreach ($affiche_eventp as $rec) {
                             ?>
 
-                            <li><a href=""><strong><?= $rec->titre ?></strong></a>
+                            <li><strong><?= $rec->titre ?></strong>
                                 <small><i class="icon-bookmark"></i><?= $rec->lieu ?><br/><i
                                         class="icon-calendar"></i> <?= $rec->jour . "/" . strftime($rec->mois) . "/" . $rec->annee ?>
                                 </small>

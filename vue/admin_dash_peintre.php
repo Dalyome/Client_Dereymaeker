@@ -28,7 +28,8 @@
                     <a href="#menu-toggle" class="visible-xs btn btn-default" id="menu-toggle">Accéder au menu</a>
                     <h1><?= $titre ?></h1>
                     <p><a href="?nouvelle_peinture" type="button" class="btn btn-default">Nouvelle peinture à insérer</a></p>
-
+                    <p><div class="alert alert-info" role="alert">Sur cette page, lorsque tu as vendu une oeuvre, il te suffit de cocher la (ou les) case(s) <strong>[vendu]</strong> correspondant aux oeuvres vendues, puis de cliquer sur le bouton <strong>[Modifier la galerie]</strong>. Cela affichera la mention "vendu" à côté de tes oeuvres sur ton site.<br/>
+                    Si tu souhaites ne plus montrer une oeuvre comme étant vendue, il te suffit de décocher la case <strong>[vendu]</strong>, puis de nouveau, de valider les modifications en cliquant sur le bouton <strong>[Modifier la galerie]</strong>.</div></p>
                     <?php if ($affiche_modif) {
                         ?>
                         <div class="row">
@@ -70,7 +71,7 @@
                     }
                     if ($affiche_success) {
                         ?>
-                        <h2>Félicitations ! La galerie création a bien été mis à jour !</h2>
+                        <h2>Félicitations ! La galerie peinture a bien été mis à jour !</h2>
                         <p><a href="javascript:history.go(-1)">Retour</a></p>
                         <?php
                     } ?>

@@ -17,14 +17,16 @@
                     <!--BOUTON A NE PAS SUPPRIMER-->
                     <a href="#menu-toggle" class="visible-xs btn btn-default" id="menu-toggle">Accéder au menu</a>
                     <h1><?= $titre ?></h1>
-                    <div class="alert alert-danger" role="alert"><strong>Attention</strong> : c'est mieux d'insérer une image qui a l'extension .jpg ou .jpeg. <br/>Les formats .gif ou .png ne sont pas supportés sur cette administration.</div>
+                    <div class="alert alert-success" role="alert"><strong>Attention</strong> : c'est mieux d'insérer une image qui a l'extension .jpg ou .jpeg. <br/>Les formats .gif ou .png ne sont pas supportés sur cette administration.<br>N'hésite pas à prendre contact avec tes partenaires pour qu'ils te fournissent les images directement si tu n'es pas sure :)</div>
+                    <div class="alert alert-warning" role="alert"><strong>Autre chose</strong> : Vérifie bien que l'URL de tes partenaires (le lien vers le site internet de tes partenaires) commence bien par <strong>http://</strong><br>
+                    EXEMPLE : l'URL de ton site internet écrit correctement est : <strong>http://</strong>sophiecreative.be</div>
                     <?php if ($affiche_insertion) {
 
                         ?>
                         <form class="well" enctype="multipart/form-data" action="" name="miam" method="POST">
 
                             <div class="form-group"><label>Titre</label>
-                                <input class="form-control" type="text" name="titrephoto" placeholder="Titre de la peinture" required/>
+                                <input class="form-control" type="text" name="titrephoto" placeholder="Nom du partenaire" required/>
                             </div>
 
 
@@ -44,7 +46,7 @@
                     if ($affiche_success) {
                         ?>
                         <h2>Félicitations ! Nouveau partenaire ajouté !</h2>
-                        <p><a class="btn btn-success btn-xs" href="javascript:history.go(-2)">Retour</a> - <a class="btn btn-success btn-xs" href="?nouveau_partner">Ajouter une nouveau partenaire</a></p>
+                        <p><a class="btn btn-success btn-xs" href="?partner">Retour</a> - <a class="btn btn-success btn-xs" href="?nouveau_partner">Ajouter une nouveau partenaire</a></p>
                         <?php
                     } ?>
                 </div>

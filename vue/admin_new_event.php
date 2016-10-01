@@ -52,7 +52,7 @@
                     if ($affiche_success) {
                         ?>
                         <h2>Félicitations ! L'évènement a bien été ajouté !</h2>
-                        <p><a href="javascript:history.go(-2)">Retour</a></p>
+                        <p><a class="btn btn-success btn-xs" href="?evenement">Retour</a> - <a class="btn btn-success btn-xs" href="?nouvel_evenement">Ajouter une nouvel évènement</a></p>
                         <?php
                     } ?>
                 </div>

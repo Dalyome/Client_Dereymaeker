@@ -42,7 +42,7 @@
                     if ($affiche_success) {
                         ?>
                         <h2>Félicitations ! Le témoignage a bien été mis à jour !</h2>
-                        <p><a href="javascript:history.go(-2)">Retour</a></p>
+                        <p><a href="?temoignage">Retour</a></p>
                         <?php
                     } ?>
                 </div>

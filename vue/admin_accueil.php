@@ -27,7 +27,7 @@
                                 <img class="figure-img img-fluid img-rounded" src="vue/img/contactenous.jpg"
                                      alt="contacte-nous"/>
                             </a>
-                            <figcaption class="figure-caption"><a href="mailto:webdevcf2m@gmail.com?Subject=Sophie%20demande%20de%20l%20aide">Contacte-nous par e-mail</a></figcaption>
+                            <figcaption class="figure-caption"><a href="mailto:webdevcf2m@gmail.com?Subject=Sophie%20demande%20de%20l%20aide">Contacte-nous par e-mail<br>webdevcf2m@gmail.com</a></figcaption>
                         </figure>
                     </p>
                 </div>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="col-lg-6">
                     <h3>Instructions et aide (si besoin)</h3>
-                    <p>à remplir</p>
+                    <div class="alert alert-info" role="alert"><strong>N'oublie pas de te déconnecter</strong> quand tu as terminé d'administrer ton site :)</div>
                     <!--BOUTON A NE PAS SUPPRIMER-->
                     <a href="#menu-toggle" class="visible-xs btn btn-default" id="menu-toggle">Accéder au menu</a>
                 </div>

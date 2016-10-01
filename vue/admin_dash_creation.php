@@ -31,6 +31,8 @@
                         ?>
                         <p><a href="?nouvelle_creation" type="button" class="btn btn-default">Nouvelle création à
                                 insérer</a></p>
+                        <p><div class="alert alert-info" role="alert">Sur cette page, lorsque tu as vendu une oeuvre, il te suffit de cocher la (ou les) case(s) <strong>[vendu]</strong> correspondant aux oeuvres vendues, puis de cliquer sur le bouton <strong>[Modifier la galerie]</strong>. Cela affichera la mention "vendu" à côté de tes oeuvres sur ton site.<br/>
+                        Si tu souhaites ne plus montrer une oeuvre comme étant vendue, il te suffit de décocher la case <strong>[vendu]</strong>, puis de nouveau, de valider les modifications en cliquant sur le bouton <strong>[Modifier la galerie]</strong>.</div></p>
                         <div class="row">
                             <?php
                             foreach ($affiche_creation as $creat) {

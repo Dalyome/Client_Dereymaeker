@@ -11,7 +11,30 @@ if (empty($_POST['inserer'])) {
     $affiche_insertion = true;
     $affiche_success = false;
 
-} else { // le formulaire est envoyé
+} elseif(!isset($_POST['oeuvre'])){
+    
+    $nom=$_POST['titrephoto'];
+    $href=$_POST['url'];
+    
+        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $dbh->beginTransaction();
+
+        $prepare = $dbh->prepare("
+        INSERT INTO `partenaire`(`nom`, `logohref`) VALUES (:nom,:href);
+        ");
+
+        $prepare->bindValue(":nom", $nom, PDO::PARAM_STR);
+        $prepare->bindValue(":href", $href, PDO::PARAM_STR);
+
+
+        $prepare->execute();
+
+        $dbh->commit();
+
+        $affiche_success = true;
+
+}else{ // le formulaire est envoyé
+var_dump($_POST);
     $affiche_insertion = false;
     $chemin3=$_POST['url'];
     $titre=$_POST['titrephoto'];

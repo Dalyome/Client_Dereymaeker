@@ -1,15 +1,28 @@
 <?php
-// var_dump($_SESSION);
 $titre = "";
-// accueil de l'admin
 if (empty($_GET)) {
     $titre = "Menu d'administration";
     require_once 'modele/admin_accueil.php';
     require_once 'vue/admin_accueil.php';
 } elseif (isset($_GET['deco'])) {
     require_once "modele/deco.php";
-
-
+    
+} elseif (isset($_GET['delete_evenement']) && ctype_digit($_GET['delete_evenement'])) {
+    $sup = (int)$_GET['delete_evenement'];
+    require_once 'modele/admin_sup_event.php';
+} elseif (isset($_GET['delete_creation']) && ctype_digit($_GET['delete_creation'])) {
+    $sup = (int)$_GET['delete_creation'];
+    require_once 'modele/admin_sup_creation.php';
+} elseif (isset($_GET['delete_peinture']) && ctype_digit($_GET['delete_peinture'])) {
+    $sup = (int)$_GET['delete_peinture'];
+    require_once 'modele/admin_sup_peintre.php';
+} elseif (isset($_GET['delete_partner']) && ctype_digit($_GET['delete_partner'])) {
+    $sup = (int)$_GET['delete_partner'];
+    require_once 'modele/admin_sup_partner.php';
+} elseif (isset($_GET['delete_temoignage']) && ctype_digit($_GET['delete_temoignage'])) {
+    $sup = (int)$_GET['delete_temoignage'];
+    require_once 'modele/admin_sup_temoin.php';
+    
 } elseif (isset($_GET['evenement'])) {
     $titre = "Menu d'administration de mes évènements";
     require_once 'modele/admin_dash_event.php';
@@ -65,22 +78,6 @@ if (empty($_GET)) {
     require_once 'modele/admin_new_temoin.php';
     require_once 'vue/admin_new_temoin.php';
 
-
-} elseif (isset($_GET['delete_evenement']) && ctype_digit($_GET['delete_evenement'])) {
-    $sup = (int)$_GET['delete_evenement'];
-    require_once 'modele/admin_sup_event.php';
-} elseif (isset($_GET['delete_creation']) && ctype_digit($_GET['delete_creation'])) {
-    $sup = (int)$_GET['delete_creation'];
-    require_once 'modele/admin_sup_creation.php';
-} elseif (isset($_GET['delete_peinture']) && ctype_digit($_GET['delete_peinture'])) {
-    $sup = (int)$_GET['delete_peinture'];
-    require_once 'modele/admin_sup_peintre.php';
-} elseif (isset($_GET['delete_partner']) && ctype_digit($_GET['delete_partner'])) {
-    $sup = (int)$_GET['delete_partner'];
-    require_once 'modele/admin_sup_partner.php';
-} elseif (isset($_GET['delete_temoignage']) && ctype_digit($_GET['delete_temoignage'])) {
-    $sup = (int)$_GET['delete_temoignage'];
-    require_once 'modele/admin_sup_temoin.php';
 } else {
     $titre = "Menu d'administration";
     require_once 'modele/admin_accueil.php';

@@ -7,7 +7,7 @@
             </a>
         </li>
         <hr/>
-        <li><a href="?creation">Creations</a></li>
+        <li><a href="?creation">Créations</a></li>
         <li><a href="?peinture">Peintures</a></li>
         <hr/>
         <li><a href="?evenement">Évènements</a></li>

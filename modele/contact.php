@@ -1,23 +1,25 @@
 <?php
-// création d'une constante contenant le mail du destinataitre (nous)
-define("MON_MAIL","");
+// création d'une constante contenant le mail du destinataitre (il faut que l'adresse soit chez l'hébergeur)
+define("MON_MAIL","sophie@sophiecreative.be");
 
 // si on a cliqué sur envoyer
 if(isset($_POST['lenom'])){
     // récupération des valeurs du formulaire dans des variables locales
     $lenom = $_POST['lenom'];
     $lemail = $_POST['lemail'];
-    $lobjet = $_POST['lobjet'];
+    $lobjet = "Contact via site : ".$_POST['lobjet'];
     $letexte = $_POST['letexte'];
-
+    $lemessage ="<html><body><p><strong style='color:#E00025;'>De</strong> ".$lenom."<br/>
+                <strong style='color:#E00025;'>Répondre à </strong><a href='".$lemail."'>" .$lemail. "</a></p>
+                <p>". $letexte ."</p></body></html>";
 
     // création de l'entête en y mettant le lien vers le mail de l'expéditeur
     $entete = "From: $lenom <$lemail> \r\n ".
-        "Reply-To: $lenom <$lemail> \r\n".
-        "X-Mailer: PHP/".phpversion();
+        "MIME-Version: 1.0\r\n".
+        "Content-Type: text/html; charset=UTF-8\r\n";
 
     // on envoie le mail avec cette fonction simple, $verif_envoi contiendra true si le mail est envoyé, false s'il y a un problème
-    $verif_envoi = mail(MON_MAIL, $lobjet, $letexte, $entete);
+    $verif_envoi = mail(MON_MAIL, $lobjet, $lemessage, $entete);
 
     // si réussi
     if($verif_envoi){
